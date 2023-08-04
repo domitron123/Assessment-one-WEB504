@@ -12,6 +12,19 @@ body {
     height: calc(100vh - 70px); /* Adjust the 80px to the height of your footer */
     margin: 0;
     padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.message p {
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+
+.message h1 {
+    color: #fffb00;
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
 }
 
 footer {
@@ -29,9 +42,12 @@ footer p {
     color: rgb(0, 0, 0);
 }
 
-.message h1 {
-    color: #3b9b00;
-    font-size: 100px;
-    margin: 0;
-    padding: 0;
+/* @media (max-width: 600px) {
+    p {
+        font-size: 50px;
+    }
 }
+
+@media (min-width: 601px) {
+
+} */
