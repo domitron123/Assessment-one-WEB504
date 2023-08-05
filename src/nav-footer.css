@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(white, rgb(83, 155, 255));
+    background: linear-gradient(white 30%, rgb(83, 155, 255) 80%);
     background-attachment: fixed;
     background-size: cover;
     color: #333;
@@ -16,12 +16,11 @@ body {
 .header {
     background-color: #fff;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -31,6 +30,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     padding: 15px;
+    margin-right: 35px;
     border: 2px solid rgb(83, 155, 255);
     border-radius: 30px;
     transition: background-color 0.3s, color 0.3s;
@@ -43,59 +43,35 @@ body {
 
 .logo {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: auto;
     font-size: 24px;
     color: #333;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 0;
-}
-
-.image-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-.image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.image img {
-    border-radius: 80px;
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-}
-
-.image figcaption {
-    margin-top: 10px;
-    font-style: italic;
-}
-
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    color: rgb(0, 0, 0);
     text-align: center;
-    padding: 20px 0;
+    padding: 10px;
+    display: block;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    font-size: 14px;
+        
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
     }
 
     .nav-link {
-        margin: 5px;
-        padding: 13px;
+        margin: 0;
+        padding: 10px;
         border-radius: 25px;
     }
 
@@ -104,6 +80,63 @@ footer {
     }
 
     .logo {
-        margin-top: 10px;
+        display: none;
     }
+}
+
+
+
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-section {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 150px;
+    /* margin-top: 40px; */
+    flex-direction: row;
+}
+
+.image-section2 {
+    display: flex;
+    margin-right: 150px;
+    flex-direction: row-reverse;
+}
+
+.image {
+    display: flex;
+    text-align: center;
+}
+
+.image img {
+    border-radius: 80px;
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    width: 400px;
+    height: 300px;
+}
+
+.image figcaption {
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fig1 {
+    margin-left: 100px;
+    margin-right: 300px;
+}
+
+.fig2 {
+    margin-left: 300px;
+    margin-right: 100px;    
 }
