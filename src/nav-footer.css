@@ -100,8 +100,8 @@ body {
 footer {
     position: absolute; /* Change to absolute positioning */
     width: 100%;
-    color: #ffffff;
-    background-color: #005FA7;
+    color: #000000;
+    /* background-color: #005FA7; */
     text-align: center;
     padding: 10px;
     bottom: 0; /* Position at the bottom */
@@ -111,7 +111,7 @@ footer {
 }
 
 footer a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -172,7 +172,7 @@ footer a {
 
 
 .second-page {
-    background-image: url(images/bottom-background2.png);
+    background-image: url(images/bottom-background4.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #0091FF; /* White background */
