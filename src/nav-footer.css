@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,10 +14,8 @@ body {
     background-image: url(images/test5.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Keep the background fixed */
     color: #ffffff;
     margin: 0;
-    
 }
 
 .header {
@@ -58,34 +56,75 @@ body {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
-  
+
 .nav-link:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
-.title h1{
+.title h1 {
     font-family: 'Aubrey-Normal';
     src: url('fonts/Aubrey-Normal.otf') format('opentype');
     display: flex;
     justify-content: center;
-    margin-top: 170px;
-    font-weight: 500; 
-    font-size: 50px;
+    margin-top: 20vh; /* Adjust this value based on your design */
+    font-weight: 500;
+    font-size: 6vw; /* Responsive font size using viewport width */
 }
 
 .scroll {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 445px;
-    margin-bottom: 100vh;
-    font-size: 20px;
+    /* Remove position: fixed; and bottom: 0; properties */
+    padding: 20px; /* Adjust padding as needed */
+    font-size: 1.5vw; /* Responsive font size using viewport width */
     font-weight: lighter;
     color: #ffffff;
+    cursor: pointer; /* Add cursor style for clickable element */
+    animation: bob 0.7s infinite alternate; /* Add animation */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 90%; /* Position at the bottom of the top half of the screen */
+    transform: translateY(-50%); /* Vertically center the element */
+    transition: none; /* Remove transition when active */
+}
+
+.scroll.active {
+    /* Keep the same positioning when active */
+    transition: none; /* Remove transition when active */
 }
 
 footer {
+    position: absolute; /* Change to absolute positioning */
+    width: 100%;
+    color: #ffffff;
+    background-color: #005FA7;
+    text-align: center;
+    padding: 10px;
+    bottom: 0; /* Position at the bottom */
+    left: 0;
+    right: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@keyframes bob {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* footer {
     position: fixed;
     width: 100%;
     color: #ffffff;
@@ -95,22 +134,23 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 20px;
-    font-size: 14px;    
-}
+    font-size: 14px;
+} */
 
-footer a {
-    color: #ffffff;
-    text-decoration: underline;display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-size: 20px;
-    font-weight: lighter;
-    color: #ffffff;
-}
+
 
 @media screen and (max-width: 768px) {
+    .title {
+        font-size: 10vw;
+        margin-top: 10vh;
+        justify-content: center;
+    }
+
+    .scroll {
+        padding: 10px;
+        font-size: 4vw;
+    }
+
     .navbar {
         justify-content: space-between;
     }
@@ -129,5 +169,66 @@ footer a {
         display: none;
     }
 }
+
+
+.second-page {
+    background-image: url(images/bottom-background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0091FF; /* White background */
+    color: #000000; /* Black text color */
+    position: absolute;
+    top: 100%; /* Push the content below */
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top 0.3s; /* Add a smooth transition */
+}
+
+.second-page.active {
+    top: 0; /* Bring the content into view */
+}
+
+
+
+.chevron::before {
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: inline-block;
+	height: 0.45em;
+	left: 0.15em;
+	position: relative;
+	top: 0.15em;
+	transform: rotate(-45deg);
+	vertical-align: top;
+	width: 0.45em;
+}
+
+.chevron.right:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.chevron.bottom:before {
+	top: 0;
+	transform: rotate(135deg);
+}
+
+.chevron.left:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
+}
+
+
+
+
+
+
+
+
 
 
