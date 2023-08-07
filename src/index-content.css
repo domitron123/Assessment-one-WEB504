@@ -27,7 +27,7 @@ body {
     justify-content: center;
     margin-top: 35vh; 
     font-weight: 500;
-    font-size: 6vw; 
+    font-size: 5vw; 
 }
 
 .scroll {
@@ -198,7 +198,12 @@ body {
     }
 
     .content h1{
-        font-size: 3vw;
-        padding: 10px;
+        font-size: 5vw;
+        /* padding: 10px; */
+    }
+
+    .second-page {
+        background-image: none;
+        background-color: black;
     }
 }
