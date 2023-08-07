@@ -1,3 +1,25 @@
+
+
+
+
+
+
+
+
+
+
+
+// AUTO SCROLL TO TOP ON PAGE REFRESH
+history.scrollRestoration = 'manual';
+if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+    } else {
+    window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+    }
+    }
+
+
 // Wait for the DOM content to be fully loaded before attaching event listeners
 document.addEventListener("DOMContentLoaded", function () {
     // Find the scroll button element

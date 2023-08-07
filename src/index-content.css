@@ -11,103 +11,146 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url(images/test5.svg);
-    /* background-image: url(images/forest-background.jpg); */
+    background-image: url(images/jakes-images/plane6-test.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #ffffff;
     margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .title h1 {
     font-family: 'Aubrey-Normal';
-    src: url('fonts/Aubrey-Normal.otf') format('opentype');
     display: flex;
     justify-content: center;
-    margin-top: 20vh; /* Adjust this value based on your design */
+    margin-top: 35vh; 
     font-weight: 500;
-    font-size: 6vw; /* Responsive font size using viewport width */
+    font-size: 6vw; 
 }
 
 .scroll {
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* Remove position: fixed; and bottom: 0; properties */
-    padding: 20px; /* Adjust padding as needed */
-    font-size: 1.5vw; /* Responsive font size using viewport width */
-    font-weight: lighter;
+    padding: 20px; 
+    font-size: 50px; 
     color: #ffffff;
-    cursor: pointer; /* Add cursor style for clickable element */
-    animation: bob 0.7s infinite alternate; /* Add animation */
+    animation: bob 0.6s infinite alternate; /* Add animation */
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    top: 90%; /* Position at the bottom of the top half of the screen */
-    transform: translateY(-50%); /* Vertically center the element */
-    transition: none; /* Remove transition when active */
+    top: 90%; 
+    position: fixed;
 }
 
-.scroll.active {
-    /* Keep the same positioning when active */
-    transition: none; /* Remove transition when active */
+
+.main-nav {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 2; 
+}
+
+.main-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; 
 }
 
 .second-page {
-    /* background-image: url(images/bottom-background7.svg); */
-    background-image: url(images/bottomtest.png);
-
+    /* background-image: url(images/jakes-images/moon.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-color: #0091FF;  */
-    /* Black text color */
     position: absolute;
-    top: 100%; /* Push the content below */
-    width: 100%;
+    background-image: url(images/jakes-images/moon.jpg);
+    background-color: black;
+    top: 100vh; 
+    width: 100vw;
     height: 100vh;
-    transition: top 0.3s; /* Add a smooth transition */
     display: flex;
     justify-content: space-around;
-   
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
-    image-rendering: crisp-edges;
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-      
+}
+
+.banner {
+    /* background-color: rgb(55, 55, 55); */
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-family: 'Aubrey-Normal';
+    font-size: 3.5vw;
+    font-weight: lighter;
 }
 
 .content {
-   width: 50%;
+   width: 75%;
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   color: #ffffff;
+   margin-top: 150px;
    
 }
 
-.content h1 {
-    
+.content .bio {
     font-weight: lighter;
     font-family: 'Aubrey-Normal';
-    src: url('fonts/Aubrey-Normal.otf') format('opentype');
+    text-align: center;
+    border-bottom: 2px solid white;  
+    padding: 20px;
+    color: rgb(255, 255, 255);
 }
+
+.gallery-button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 40px;
+    
+}
+
+.gallery-button h1 a {
+    text-decoration: none;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Aubrey-Normal';
+    color: rgb(255, 255, 255);
+}
+
+.button-text {
+    font-family: 'Aubrey-Normal';
+    padding: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.8s ease-out, color 0.8s ease-out; /* Apply transition to both background-color and color */
+}
+
+.button-text:hover {
+    background-color: white;
+    border-radius: 10px;
+    border: 0px solid black;
+    color: rgb(0, 0, 0);
+}
+
 
 .content a {
     text-decoration: underline;
     color: #ffffff;
 }
 
-.second-page.active {
-    top: 0; /* Bring the content into view */
-}
-
 .chevron::before {
 	border-style: solid;
-	border-width: 0.25em 0.25em 0 0;
+	border-width: 0.08em 0.08em 0 0;
 	content: '';
 	display: inline-block;
+    cursor: pointer;
 	height: 0.45em;
 	left: 0.15em;
 	position: relative;
@@ -115,6 +158,14 @@ body {
 	transform: rotate(-45deg);
 	vertical-align: top;
 	width: 0.45em;
+}
+
+.chevron {
+    transition: color 0.5s ease-in-out;
+}
+
+.chevron:hover {
+    color: rgb(0, 0, 0);    
 }
 
 .chevron.right:before {
@@ -133,11 +184,21 @@ body {
 }
 
 
+/* RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 10vw;
+        margin-top: 10vh;
+        justify-content: center;
+    }
 
+    .scroll {
+        padding: 10px;
+        font-size: 4vw;
+    }
 
-
-
-
-
-
-
+    .content h1{
+        font-size: 3vw;
+        padding: 10px;
+    }
+}
