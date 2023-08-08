@@ -22,7 +22,7 @@ body {
 }
 
 .title h1 {
-    font-family: 'Aubrey-Normal';
+    font-family: 'Audrey-normal.otf';
     display: flex;
     justify-content: center;
     margin-top: 35vh; 
@@ -84,7 +84,7 @@ body {
 }
 
 .banner h1 {
-    font-family: 'Aubrey-Normal';
+    font-family: 'fonts/Audrey-Normal.otf';
     font-size: 3.5vw;
     font-weight: lighter;
 }
