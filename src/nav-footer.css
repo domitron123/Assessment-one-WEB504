@@ -217,7 +217,7 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 20px;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: lighter;
 }
     
@@ -258,4 +258,55 @@ body {
     border-radius: 10px;
     border: 0px solid black;
     color: rgb(0, 0, 0);
+}
+
+/* responsiveness */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        width: 100%;
+    }
+
+
+    /* .title {
+        font-size: 4rem;
+    } */
+
+    .title h1 {
+        font-size: 2rem;
+        margin-top: 15vh;
+    }
+
+    .icon svg {
+        height: 5vh;
+        width: 10vw;
+    }
+
+    .second-header {
+        font-size: 1rem;
+        margin-top: 30vh;
+    }
+
+    .bio {
+        width: 90%;
+    }
+
+    .bio h1 {
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+
+    .button-text {
+        font-size: 1.5rem;
+    }
+
+    .gallery-button a {
+        font-size: 1.5rem;
+    }
+
+    .second-page {
+        background-image: none;
+    }
 }
