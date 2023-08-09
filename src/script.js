@@ -18,4 +18,4 @@ function scrollToBottom(speed) {
     };
 
     requestAnimationFrame(scrollDown);
-}
+}   
