@@ -113,10 +113,13 @@ html {
 
 .gallery-footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 1rem;   
     color: white;
 }   
+
+.gallery-footer p {
+    margin-bottom: 2rem;
+}
 
 .gallery-footer a {
     color: white;

@@ -158,8 +158,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: none;
-    /* background-color: black; */
+    background-color: black;
     background-image: url(images/jakes-images/moon.jpg);
+    /* move background down */
+    background-position: center 20vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -209,16 +211,24 @@ body {
     flex-direction: column-reverse;
     height: 100%;
     width: 100%;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
     padding: 20px;
     font-size: 1rem;
-    font-weight: lighter;
-}
+    font-weight: lighter;   
     
+}
+        
+.text-container p {
+    display: inline-block;  
+    background-color: white;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 10px;
+}
 
 .footer a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -261,11 +271,6 @@ body {
         width: 100%;
     }
 
-
-    /* .title {
-        font-size: 4rem;
-    } */
-
     .title h1 {
         font-size: 2rem;
         margin-top: 15vh;
@@ -293,6 +298,16 @@ body {
         font-size: 0.8rem;
     }
 
+    .text-container p {
+        background-color: black;
+        color: white;
+        border: none;
+    }
+
+    .text-container a {
+        color: white;
+    }
+
     .button-text {
         font-size: 1.5rem;
     }
@@ -303,5 +318,15 @@ body {
 
     .second-page {
         background-image: none;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .button-text {
+        background-color: black;
+    }
+    
+    .bio {
+        background-color: black;
     }
 }
