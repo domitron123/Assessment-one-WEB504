@@ -159,7 +159,7 @@ body {
     padding: 0;
     overflow-x: none;
     background-color: black;
-    background-image: url(images/jakes-images/moon.jpg);
+    /* background-image: url(images/jakes-images/plane7.jpg); */
     /* move background down */
     /* background-position: center 20vh; */
     background-repeat: no-repeat;
@@ -184,7 +184,7 @@ body {
 }
 
 .bio {
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -212,7 +212,7 @@ body {
     flex-direction: column-reverse;
     height: 100%;
     width: 100%;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     font-size: 1rem;
@@ -222,14 +222,14 @@ body {
         
 .text-container p {
     display: inline-block;  
-    background-color: white;
-    border: solid 2px white;
+    /* background-color: white; */
+    /* border: solid 2px white; */
     border-radius: 10px;
     padding: 10px;
 }
 
 .footer a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: underline;
 }
 
