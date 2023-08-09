@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="nav-footer.css"> 
         <link rel="stylesheet" href="gallery.css">
+        <link rel="stylesheet" href="modal.css">
         <!--ICON STYLESHEET-->
         <link href="https://unpkg.com/css.gg@2.0.0/icons/css/chevron-down.css" rel="stylesheet">
         <title>Jake Richards Photography Gallery</title>
     </head>
-<body>  
+<body onload="getPics()">  
+    
  <div class="main">
+    
     <div class="header">
             <nav class="navbar">
                 <a href="index.html" class="nav-link">Home</a>
@@ -19,8 +22,7 @@
                 <a href="about.html" class="nav-link">About</a>
             </nav>
     </div>
-
-
+    <div id="fullpage" onclick="this.style.display='none';"></div>
     <div class="grid-container">
         <div class="cell"><img src="images/jakes-images/bird1.jpg"></div>
         <div class="cell"><img src="images/jakes-images/bird2.jpg"></div>
@@ -40,11 +42,14 @@
         <div class="cell"><img src="images/jakes-images/plane10.jpg"></div>
     </div>
 
+    
+      
 
     <div class="gallery-footer">
         <p>&copy; Jake Richards Photography <br>
         Developed by <a href="https://dtownshend.com" target="_blank">Dom Townshend</a></p>
     </div>
 </div>
+<script src="gallery.js"></script>
 </body>
 </html>
